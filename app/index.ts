@@ -1,5 +1,5 @@
 import Character from './character';
-import Battle from './battle';
+import DigitalBattle from './digital-battle';
 
 let user, adversary;
 
@@ -9,6 +9,6 @@ for (let i = 0; i < 10; i++) {
   user = new Character();
   adversary = new Character();
   console.log(
-    user + ' vs ' + adversary + ' > ' + Battle.solve(user, adversary)
+    user + ' vs ' + adversary + ' > ' + DigitalBattle.solve(user, adversary)
   );
 }
