@@ -16,7 +16,7 @@ export default class Battle {
   }
 
   static solve(attacker: Character, defender: Character) : string {
-    let result = this.color(attacker.type, defender.type);
+    let result = this.color(attacker.getType(), defender.getType());
     if (result > 0) {
       return 'won';
     }

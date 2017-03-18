@@ -1,8 +1,8 @@
 import Tools from './utils/tools';
 
 export default class Character {
-  type: number;
-  power: number;
+  protected type: number;
+  protected power: number;
 
   constructor (type?: number, power?: number) {
     if (type) {
@@ -15,6 +15,14 @@ export default class Character {
     } else {
       this.power = Tools.getRand(3,5);
     }
+  }
+
+  getType() : number {
+    return this.type;
+  }
+
+  getPower() : number {
+    return this.power;
   }
 
   toString() : string {

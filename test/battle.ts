@@ -35,21 +35,21 @@ describe('class Battle', () => {
     });
     it('should give draw', () => {
       expect(Battle.solve(
-        {type: 1, power: 2},
-        {type: 1, power: 2}))
+        new Character(1, 2),
+        new Character(1, 2)))
         .to.equal('draw');
     });
     it('should give won', () => {
       expect(Battle.solve(
-        {type: 1, power: 2},
-        {type: 2, power: 2}))
+        new Character(1, 2),
+        new Character(2, 2)))
         .to.equal('won');
     });
     it('should give lost', () => {
       expect(Battle.solve(
-          {type: 1, power: 2},
-          {type: 4, power: 2}))
-          .to.equal('lost');
+        new Character(1, 2),
+        new Character(4, 2)))
+        .to.equal('lost');
     });
   });
 });
